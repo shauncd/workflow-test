@@ -15,4 +15,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Build docker image
+        run: docker build -t my-image:latest .
       - run: echo "🍏 This job's status is ${{ job.status }}."
